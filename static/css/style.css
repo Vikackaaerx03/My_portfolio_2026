@@ -1,0 +1,80 @@
+/* Основные переменные дизайна */
+:root {
+    --dark-bg: #0a0b1e;
+    --card-pink: #fde4ec;
+    --accent-pink: #f9a8d4;
+    --text-white: #ffffff;
+    --text-dark: #1f2937;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdf2f8; /* Мягкий розовый фон всей страницы */
+}
+
+/* Hero Section (темная часть) */
+.hero {
+    background-color: var(--dark-bg);
+    color: var(--text-white);
+    padding: 60px 10%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    text-align: center;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--accent-pink);
+}
+
+.hero-cat {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px 0;
+}
+
+/* Сетка из 8 кнопок */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+.service-card {
+    background: var(--text-white);
+    padding: 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-card:hover {
+    background: var(--accent-pink);
+    transform: translateY(-10px);
+    color: white;
+}
+
+.service-card h3 {
+    margin: 15px 0 5px 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Кнопка записи */
+.btn-main {
+    background: var(--accent-pink);
+    color: var(--dark-bg);
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
