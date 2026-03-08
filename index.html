@@ -1,76 +1,87 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МОЕ ПОРТФОЛИО | Viktoriia Roslav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
 
-{% block content %}
 <div class="portfolio-wrapper">
     
     <header class="hero-section">
-        <div class="top-logo">MY PORTFOLIO</div>
+        <div class="top-logo">МОЕ ПОРТФОЛИО</div>
         
         <div class="hero-content">
             <h1>PYTHON & AI DEVELOPER</h1>
-            <p class="slogan">Engineering intelligent RAG solutions and neural networks. <br> Viktoriia Roslav</p>
+            <p class="slogan">Разработка интеллектуальных решений RAG и нейронных сетей. <br> Viktoriia Roslav</p>
             
             <div class="portrait-container">
                 <span class="avatar-icon">👩‍💻</span>
             </div>
             
-            <button class="primary-btn">CONTACT ME</button>
+            <button class="primary-btn">СВЯЗАТЬСЯ СО МНОЙ</button>
         </div>
     </header>
 
     <section class="bottom-section">
         <div class="cards-grid">
             
-            <a href="/education.html" class="dark-card">
+            <a href="templates/pages/education.html" class="dark-card">
                 <span class="card-icon">🎓</span>
-                <h3>EDUCATION</h3>
-                <p>NTU "KhPI" & KN-732</p>
+                <h3>ОБРАЗОВАНИЕ</h3>
+                <p>НТУ "ХПИ" и КН-732</p>
             </a>
 
-            <a href="/courses.html" class="dark-card">
+            <a href="templates/pages/courses.html" class="dark-card">
                 <span class="card-icon">📜</span>
-                <h3>COURSES</h3>
-                <p>Prometheus & Self-Study</p>
+                <h3>КУРСЫ</h3>
+                <p>Прометей и самообучение</p>
             </a>
 
-            <a href="/commercial.html" class="dark-card">
+            <a href="templates/pages/commercial.html" class="dark-card">
                 <span class="card-icon">💼</span>
-                <h3>COMMERCIAL EXPERIENCE</h3>
-                <p>Paid Projects & Orders</p>
+                <h3>КОММЕРЧЕСКИЙ ОПЫТ</h3>
+                <p>Платные проекты и заказы</p>
             </a>
 
-            <a href="/telegram-bots.html" class="dark-card">
+            <a href="templates/pages/telegram-bots.html" class="dark-card">
                 <span class="card-icon">🤖</span>
-                <h3>TELEGRAM BOTS</h3>
-                <p>Smart RAG Assistants</p>
+                <h3>TELEGRAM-БОТЫ</h3>
+                <p>Умные RAG-ассистенты</p>
             </a>
 
-            <a href="/khpi-projects.html" class="dark-card">
+            <a href="templates/pages/university-projects.html" class="dark-card">
                 <span class="card-icon">🏛️</span>
-                <h3>KHPI PROJECTS</h3>
-                <p>Binary Relations & Labs</p>
+                <h3>ПРОЕКТЫ ХПИ</h3>
+                <p>Лабораторные работы</p>
             </a>
 
-            <a href="/tech-stack.html" class="dark-card">
+            <a href="templates/pages/tech-stack.html" class="dark-card">
                 <span class="card-icon">💻</span>
-                <h3>TECH STACK</h3>
+                <h3>ТЕК-СТЕК</h3>
                 <p>Python, C++, C#, HTML/CSS</p>
             </a>
 
-            <a href="/neural-networks-ai.html" class="dark-card">
+            <a href="templates/pages/ai-neural.html" class="dark-card">
                 <span class="card-icon">🧠</span>
-                <h3>NEURAL NETWORKS & AI</h3>
+                <h3>НЕЙРОСЕТИ И AI</h3>
                 <p>Deep Learning Models</p>
             </a>
 
-            <a href="/other-tiktok.html" class="dark-card">
+            <a href="templates/pages/others.html" class="dark-card">
                 <span class="card-icon">📱</span>
-                <h3>OTHER (TIKTOK)</h3>
-                <p>Content Creation</p>
+                <h3>ДРУГОЕ (TIKTOK)</h3>
+                <p>Создание контента</p>
             </a>
 
         </div>
     </section>
 
 </div>
-{% endblock %}
+
+</body>
+</html>
