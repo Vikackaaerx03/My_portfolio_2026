@@ -2,23 +2,24 @@
 
 :root {
     --deep-dark-blue: #080a13;
-    --cream-pink: #fcf4f6;
-    --btn-pink: #f9c8d4;
+    /* Нежно-зеленый для кнопок, иконок и обводок */
+    --btn-green: #a8e6cf; 
+    /* Очень светлый кремово-зеленый для фона */
+    --cream-green: #f2fbf5; 
     --text-white: #ffffff;
     --text-muted: #8b92a5;
-    /* Я создал переменную для полупрозрачного розового */
-    --cream-pink-transparent: rgba(252, 244, 246, 0.7); 
+    /* Полупрозрачный светло-зеленый для нижнего блока */
+    --cream-green-transparent: rgba(242, 251, 245, 0.75); 
 }
 
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: var(--deep-dark-blue);
-    /* Убираем фоновый цвет отсюда, он будет в псевдоэлементе */
     background-color: transparent; 
 }
 
-/* --- МАГИЯ ФОНОВОГО ИЗОБРАЖЕНИЯ НА ВЕСЬ САЙТ --- */
+/* ФОНОВОЕ ИЗОБРАЖЕНИЕ */
 body::after {
     content: "";
     position: fixed;
@@ -26,32 +27,27 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2; /* Самый дальний слой */
-    
-    /* Я ДОБАВИЛ ФОНОВОЕ ИЗОБРАЖЕНИЕ И ПРОЗРАЧНОСТЬ 30% */
+    z-index: -2;
     background-image: url('background.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.3; /* Прозрачность 30% */
+    opacity: 0.3; 
 }
 
-/* Предизагрузчик для фона (чтобы не было белого мерцания) */
-.bg-image-preloader {
-    display: none;
-}
+.bg-image-preloader { display: none; }
 
 .portfolio-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     position: relative;
-    z-index: 1; /* Чтобы блоки были поверх прозрачного фона */
+    z-index: 1; 
 }
 
-/* --- TOP HERO SECTION --- */
+/* --- ВЕРХНИЙ БЛОК --- */
 .hero-section {
-    background-color: var(--deep-dark-blue); /* Непрозрачный темно-синий */
+    background-color: var(--deep-dark-blue);
     color: var(--text-white);
     padding: 40px 20px 80px;
     text-align: center;
@@ -81,28 +77,28 @@ body::after {
     line-height: 1.5;
 }
 
-/* --- СТИЛИ ДЛЯ ТВОЕЙ АВАТАРКИ В КРУГЕ --- */
+/* --- АВАТАРКА --- */
 .portrait-container {
     width: 160px;
     height: 160px;
-    background-color: #121626; /* Фон круга, если фото не загрузится */
-    border: 3px solid var(--btn-pink);
+    background-color: #121626;
+    border: 3px solid var(--btn-green); /* Теперь обводка зеленая */
     border-radius: 50%;
     margin: 0 auto 40px auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Чтобы фото не вылезало за круг */
+    overflow: hidden; 
 }
 
 .avatar-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Фото заполнит круг, сохраняя пропорции */
+    object-fit: cover; 
 }
 
 .primary-btn {
-    background-color: var(--btn-pink);
+    background-color: var(--btn-green); /* Зеленая кнопка */
     color: var(--deep-dark-blue);
     border: none;
     padding: 18px 45px;
@@ -116,21 +112,19 @@ body::after {
 
 .primary-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(249, 200, 212, 0.2);
+    box-shadow: 0 10px 20px rgba(168, 230, 207, 0.3); /* Зеленое свечение */
 }
 
-/* --- BOTTOM SECTION (С КАРТОЧКАМИ) --- */
+/* --- НИЖНИЙ БЛОК --- */
 .bottom-section {
     padding: 80px 5%;
     max-width: 1200px;
     margin: 0 auto;
-    
-    /* Я СДЕЛАЛ РОЗОВЫЙ ФОН НЕМНОГО ПРОЗРАЧНЫМ */
-    background-color: var(--cream-pink-transparent); 
-    border-radius: 30px; /* Немного закруглим края для стиля */
-    margin-top: -30px; /* Чтобы он немного заходил под синий блок */
+    background-color: var(--cream-green-transparent); /* Прозрачный зеленый фон */
+    border-radius: 30px; 
+    margin-top: -30px; 
     position: relative;
-    z-index: 2; /* Чтобы быть поверх фона body::after */
+    z-index: 2; 
 }
 
 .cards-grid {
@@ -156,7 +150,7 @@ body::after {
 
 .dark-card:hover {
     transform: translateY(-8px);
-    border: 2px solid var(--btn-pink);
+    border: 2px solid var(--btn-green); /* Зеленая рамка при наведении */
 }
 
 .card-icon {
@@ -177,7 +171,7 @@ body::after {
     margin: 0;
 }
 
-/* --- MOBILE ADAPTATION --- */
+/* --- АДАПТИВ --- */
 @media (max-width: 1024px) {
     .cards-grid { grid-template-columns: repeat(2, 1fr); }
     .hero-content h1 { font-size: 2.8rem; }
