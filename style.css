@@ -230,3 +230,102 @@ body::after {
     .hero-content h1 { font-size: 2.2rem; }
     .bottom-section { padding: 50px 20px; }
 }
+
+/* =========================================
+   СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ И БЛОКОВ
+   ========================================= */
+.inner-hero {
+    padding: 60px 20px 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.content-box {
+    background-color: var(--deep-dark-blue);
+    color: var(--text-white);
+    padding: 40px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+.content-box::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.content-box > * { position: relative; z-index: 1; }
+
+.content-box h2 {
+    color: var(--btn-green);
+    margin-top: 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.content-box p, .content-box ul {
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.content-box ul { padding-left: 20px; }
+.content-box li { margin-bottom: 10px; }
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* --- СТИЛИ ДЛЯ РАЗДЕЛЕНИЯ ТЕКСТА И ФОТО/PDF --- */
+.split-layout {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.text-side {
+    flex: 1;
+}
+
+.img-side {
+    flex: 1;
+    text-align: center;
+}
+
+.img-side img, .img-side iframe {
+    max-width: 100%;
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    border: 2px solid var(--btn-green);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.course-item {
+    background-color: var(--deep-dark-blue);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(168, 230, 207, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .split-layout {
+        flex-direction: column;
+    }
+    .img-side iframe, .img-side img {
+        height: 250px;
+    }
+}
